@@ -9,17 +9,20 @@ namespace FortuneTeller1
     class Program
     {
         static void Main(string[] args)
+        
+            //This program asks for user info and creates a fun fortune displayed on the console for the participant.
+
         {   //Variables in this section are for gathering user info
             Console.WriteLine("Please enter your first name: ");
-            string userFirstName = Console.ReadLine().ToLower();
+            string userFirstName = Console.ReadLine();
 
             Console.WriteLine("Please enter your last name: ");
-            string userLastName = Console.ReadLine().ToLower();
+            string userLastName = Console.ReadLine(); 
 
             Console.WriteLine("Please enter your age: ");
             int userAge = int.Parse(Console.ReadLine());
 
-            Console.WriteLine("Please enter the number of the month you were born: ");
+            Console.WriteLine("Please enter the number of the month you were born : ");
             int birthMonth = int.Parse(Console.ReadLine());
              
             Console.WriteLine("Please enter your favorite ROYGBIV color.  If you require a list of colors type \"Help\"");
@@ -41,7 +44,7 @@ namespace FortuneTeller1
             string modeOfTransport;
             string retirementMoney;
  
-            if (userAge % 2 ==0)
+            if (userAge % 2 ==0) //User Age determination for retirement year
             {
                 retireYear = "five";
             }
@@ -51,7 +54,7 @@ namespace FortuneTeller1
             }
 
 
-            if (numberSiblings == 1)
+            if (numberSiblings == 1)  //User number of siblings detrmination
             {
                 vacationHome = "Oregon";
             }
@@ -74,7 +77,7 @@ namespace FortuneTeller1
 
             
 
-            if (userColorInput == "red")
+            if (userColorInput == "red") //User color choice determination for mode of transportation
             {
                 modeOfTransport = "car";
             }
@@ -103,7 +106,8 @@ namespace FortuneTeller1
                 modeOfTransport = "hoverboard";
             }
 
-            if (birthMonth == 1 || birthMonth <= 4)
+
+            if (birthMonth == 1 || birthMonth <= 4) //User birth month determination for retirement money amount
             {
                 retirementMoney = "$50k";
             }
